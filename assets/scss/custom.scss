@@ -1,4 +1,83 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
 #current-date {
   font-family: "Lucida Console", Monaco, monospace;
   min-height: 2.4em;
+  margin: 0.5em 0;
+}
+
+.hero-circle {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+  border: 8px solid theme-color('dark');
+  border-radius: 50%;
+  // box-shadow: 0 1px 8px rgba(34,34,34,0.3),inset 0 1px 8px rgba(34,34,34,0.3);
+  // background: url(../img/bg.png) 0 50%;
+  }
+
+.hero-face {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-face:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  background: theme-color('dark');
+  border-radius: 6px;
+  content: "";
+  display:block
+}
+
+.hero-hour {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -4px 0 -4px -25%;
+  padding: 4px 0 4px 25%;
+  background: theme-color('dark');
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  border-radius:4px 0 0 4px
+}
+
+.hero-minute {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40% -3px 0;
+  padding: 40% 3px 0;
+  background: theme-color('dark');
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  border-radius:3px 3px 0 0
+}
+
+.hero-second {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40% -1px 0 0;
+  padding: 40% 1px 0;
+  background: theme-color('dark');
+  -ms-transform-origin: 50% 100%;
+  transform-origin:50% 100%
 }

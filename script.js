@@ -1,18 +1,22 @@
-$(document).ready(
-  setInterval(
-    renderDate, 10
-  )
-)
+let currentDate = moment();
 
+const incrementCurrentDate = () => {
+  currentDate.add(1, 'days');
+}
 
-function renderDate () {
+const decrementCurrentDate = () => {
+  currentDate.subtract(1, 'days');
+}
+
+const renderCurrentDate = () => {
+  const currentTime = moment().format(', h:mm:ss.SS a');
   $('#current-date').text(
-    moment().format('MMMM Do YYYY, h:mm:ss.SS a')
+    currentDate.format('MMMM Do YYYY') + currentTime
   )
   updateClock();
 }
 
-function updateClock(){
+const updateClock = () => {
   var now = moment(),
       second = now.seconds() * 6,
       minute = now.minutes() * 6 + second / 60,
@@ -22,3 +26,9 @@ function updateClock(){
   $('#minute').css("transform", "rotate(" + minute + "deg)");
   $('#second').css("transform", "rotate(" + second + "deg)");
 }
+
+$(document).ready(
+  setInterval(
+    renderCurrentDate, 10
+  )
+)

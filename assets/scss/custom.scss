@@ -6,15 +6,27 @@
   @return map-get($theme-colors, $key);
 }
 
-button {
+button.date-selector {
   background: none;
   border: none;
+}
+
+input {
+  outline: none;
+  flex-grow: 1;
+  margin-right: 1rem;
+  padding-left: 0.5rem;
 }
 
 #current-date {
   font-family: "Lucida Console", Monaco, monospace;
   min-height: 2.4em;
   margin: 0.5em 0;
+}
+
+#scheduler {
+  list-style-type: none;
+  padding: 0;
 }
 
 .hero-circle {
@@ -85,4 +97,33 @@ button {
   background: theme-color('dark');
   -ms-transform-origin: 50% 100%;
   transform-origin:50% 100%
+}
+
+.hour-container, form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hour-container.row {
+  margin: 0 auto;
+  border-top: thin solid #0000001a;
+  padding: 1rem 0;
+}
+
+.hour-label {
+  margin: 0;
+  font-weight: 300;
+}
+
+.active-hour {
+  background-color: theme-color('dark');
+}
+
+.past-hour {
+  background-color: theme-color('secondary');
+}
+
+.future-hour {
+  background-color: theme-color('light');
 }

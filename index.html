@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>Day Planner</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron container text-center">
+      <h1 class="display-4">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <hr class="my-4">
+      <div class="d-flex justify-content-between">
+        <button type="button" class="float-left date-selector" style="outline: none;" onclick="decrementCurrentDate();"><i class="fas fa-angle-left"></i></button>
+        <h4 id="current-date" class="d-flex justify-content-center align-items-center"></h4>
+        <button type="button" class="float-right date-selector" style="outline: none;" onclick="incrementCurrentDate();"><i class="fas fa-angle-right"></i></button>
+      </div>
+      <ol id="scheduler">
+      </ol>
+      <div class="hero-circle">
+        <div class="hero-face">
+          <div id="hour" class="hero-hour"></div>
+          <div id="minute" class="hero-minute"></div>
+          <div id="second" class="hero-second"></div>
+        </div>
+      </div>
+      <hr class="my-4">
+    </div>
+  </div>
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="./node_modules/moment/moment.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

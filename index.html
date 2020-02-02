@@ -17,6 +17,13 @@
       <h1 class="display-4">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <hr class="my-4">
+      <div class="d-flex justify-content-between">
+        <button type="button" class="float-left date-selector" style="outline: none;" onclick="decrementCurrentDate();"><i class="fas fa-angle-left"></i></button>
+        <h4 id="current-date" class="d-flex justify-content-center align-items-center"></h4>
+        <button type="button" class="float-right date-selector" style="outline: none;" onclick="incrementCurrentDate();"><i class="fas fa-angle-right"></i></button>
+      </div>
+      <ol id="scheduler">
+      </ol>
       <div class="hero-circle">
         <div class="hero-face">
           <div id="hour" class="hero-hour"></div>
@@ -24,13 +31,7 @@
           <div id="second" class="hero-second"></div>
         </div>
       </div>
-      <div class="d-flex justify-content-between">
-        <button type="button" class="float-left date-selector" style="outline: none;" onclick="decrementCurrentDate();"><i class="fas fa-angle-left"></i></button>
-        <h4 id="current-date" class="d-flex justify-content-center"></h4>
-        <button type="button" class="float-right date-selector" style="outline: none;" onclick="incrementCurrentDate();"><i class="fas fa-angle-right"></i></button>
-      </div>
-      <ol id="scheduler">
-      </ol>
+      <hr class="my-4">
     </div>
   </div>
   <script src="./node_modules/jquery/dist/jquery.js"></script>

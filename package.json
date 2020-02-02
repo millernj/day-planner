@@ -4,7 +4,8 @@
   "description": "A basic day planner, front end web app that saves simple schedules to local storage",
   "main": "script.js",
   "scripts": {
-    "start": "open index.html && sass --watch assets/scss/custom.scss assets/style.css"
+    "start": "open index.html && sass --watch assets/scss/custom.scss assets/style.css",
+    "deploy": "gh-pages -d ."
   },
   "repository": {
     "type": "git",
@@ -15,10 +16,11 @@
   "bugs": {
     "url": "https://github.com/millernj/day-planner/issues"
   },
-  "homepage": "https://github.com/millernj/day-planner#readme",
+  "homepage": "https://millernj.github.io/day-planner/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
     "bootstrap": "^4.4.1",
+    "gh-pages": "^2.2.0",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "popper.js": "^1.16.1",

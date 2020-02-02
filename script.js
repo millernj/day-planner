@@ -75,10 +75,32 @@ const buildHourContainer = (datetime) => {
   activityForm.append(activityInput, activityButton);
   hourContainer.append(hourLabel, activityForm);
   
-  if (datetime > currentDate) {
 
+  const inputHour = datetime.hour();
+  const inputYear = datetime.year();
+  const inputDayOfYear = datetime.dayOfYear();
+  const currentHour = moment().hour();
+  const currentYear = moment().year();
+  const currentDayOfYear = moment().dayOfYear();
+
+  console.log({inputHour, inputYear, inputDayOfYear})
+  console.log({currentHour, currentYear, currentDayOfYear})
+  if (inputYear > currentYear || inputDayOfYear > currentDayOfYear) {
+    hourContainer.addClass('future-hour');
+  } else if (inputYear < currentYear || inputDayOfYear < currentDayOfYear) {
+    hourContainer.addClass('past-hour');
+  } else {
+    if (inputHour === currentHour) {
+      hourContainer.addClass('active-hour');
+    } 
+    if (inputHour < currentHour) {
+      hourContainer.addClass('past-hour');
+    }
+    if (inputHour > currentHour) {
+      hourContainer.addClass('future-hour');
+    }
   }
-  hourContainer
+
   return hourContainer;
 }
 

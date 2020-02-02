@@ -107,15 +107,16 @@ input {
 }
 
 .active-hour {
-  background-color: #343a40;
+  background-color: #dc3545;
 }
 
 .past-hour {
-  background-color: #6c757d;
+  background-image: url("./dark-grey-terrazzo.png");
+  color: #f8f9fa;
 }
 
 .future-hour {
-  background-color: #f8f9fa;
+  background-image: url("./light-grey-terrazzo.png");
 }
 
 /*# sourceMappingURL=style.css.map */

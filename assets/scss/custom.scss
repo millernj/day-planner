@@ -117,13 +117,16 @@ input {
 }
 
 .active-hour {
-  background-color: theme-color('dark');
+  background-color: theme-color('danger');
 }
 
 .past-hour {
-  background-color: theme-color('secondary');
+  // background-color: theme-color('dark');
+  background-image: url('./dark-grey-terrazzo.png');
+  color: theme-color('light');
 }
 
 .future-hour {
-  background-color: theme-color('light');
+  // background-color: theme-color('light');
+  background-image: url('./light-grey-terrazzo.png');
 }

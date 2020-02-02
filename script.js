@@ -13,7 +13,7 @@ const decrementCurrentDate = () => {
 const renderCurrentDate = () => {
   const currentTime = moment().format(', h:mm:ss.SS a');
   $('#current-date').text(
-    currentDate.format('MMMM Do YYYY') + currentTime
+    currentDate.format('dddd, MMMM Do YYYY') + currentTime
   )
   updateClock();
 }

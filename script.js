@@ -54,7 +54,7 @@ const buildHourContainer = (datetime) => {
   
   const activityButton = $(`<button type="submit" form="${hourString}-form"></button>`);
   const saveIcon = $('<i>');
-  saveIcon.addClass('far fa-save');
+  saveIcon.addClass('fa fa-floppy-o');
   saveIcon.attr('aria-hidden', true);
 
   if (activity) {
